@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+
+kind: Deployment
+
+metadata:
+
+  name: newdeploy
+  
+
+  labels:
+
+    app: myapp
+
+spec:
+
+  replicas: 2
+
+  selector:
+
+    matchLabels:
+
+      app: myapp
+
+  template:
+
+    metadata:
+
+      labels:
+
+        app: myapp
+
+    spec:
+
+      containers:
+
+      - name: python-app
+
+        image: gcr.io/mostafa-salah-377213/python-app
+
+        ports:
+
+        - containerPort: 8000
