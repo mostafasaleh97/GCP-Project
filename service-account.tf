@@ -1,16 +1,4 @@
-# resource "google_project_iam_custom_role" "my-node-role" {
-#   role_id     = "myNodeRole"
-#   title       = "node-role"
-#   permissions = ["resourcemanager.projects.get","storage.objects.get","storage.objects.list"]
-# }
-# data "google_iam_role" "instance-role" {
-#   name = "roles/container.admin"
-# }
-# resource "google_project_iam_custom_role" "my-instance-role" {
-#   role_id     = "myInstanceRole"
-#   title       = "instance-role"
-#   permissions = ["container.clusters.get","container.nodes.list","container.pods.list","container.pods.get","container.pods.delete","container.ingresses.list","container.ingresses.get","container.services.list","container.services.get","container.services.delete"]
-# }
+
 #####################service account to access private cluster from private instance#############
 resource "google_service_account" "cluster-service" {
   account_id   = "service-cluster"
